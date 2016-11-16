@@ -20,12 +20,12 @@ class UserLog extends ActiveRecord {
      * 修改
      * ul_type
      */
-    const TYPE_EDIT_USER  = 1;
+    const TYPE_EDIT_USER  = 2;
     /**
      * 删除
      * ul_type
      */
-    const TYPE_DEL_USER   = 1;
+    const TYPE_DEL_USER   = 3;
 
     /**
      * 成功
