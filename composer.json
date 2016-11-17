@@ -1,6 +1,6 @@
 {
-    "name": "seffeng/yii_demo",
-    "description": "yii2 Demo",
+    "name": "seffeng/yii_user",
+    "description": "yii2 User",
     "type": "project",
     "repositories": {
         "packagist": {
