@@ -2,7 +2,7 @@
 
 namespace zxf\models\entities;
 
-use zxf\web\user\components\ActiveRecord;
+use zxf\components\ActiveRecord;
 use zxf\models\services\ConstService;
 use zxf\models\services\FunctionService;
 

@@ -3,7 +3,7 @@
 namespace zxf\models\entities;
 
 use Yii;
-use zxf\web\user\components\ActiveRecord;
+use zxf\components\ActiveRecord;
 use zxf\models\queries\UserGroupQuery;
 
 class UserGroup extends ActiveRecord {
