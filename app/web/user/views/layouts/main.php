@@ -51,6 +51,7 @@ $web_url = Yii::getAlias('@web');
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                             <!-- Notifications: style can be found in dropdown.less -->
+                            <?php if (UserService::isLogin()): ?>
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
@@ -86,6 +87,16 @@ $web_url = Yii::getAlias('@web');
                                     </li>
                                 </ul>
                             </li>
+                            <?php else: ?>
+                            <!-- Notifications: style can be found in dropdown.less -->
+                            <li class="dropdown notifications-menu">
+                                <a href="<?php echo Url::to(['site/login']); ?>">登录</a>
+                            </li>
+                            <!-- Notifications: style can be found in dropdown.less -->
+                            <li class="dropdown notifications-menu">
+                                <a href="<?php echo Url::to(['site/register']); ?>">注册</a>
+                            </li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </nav>
