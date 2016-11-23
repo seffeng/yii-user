@@ -55,6 +55,7 @@ class UserInfo extends ActiveRecord {
      */
     public function beforeSave($insert) {
         $this->ui_lasttime = THIS_TIME;
+        !$this->ui_phone && $this->ui_phone = 0;
         return parent::beforeSave($insert);
     }
 
