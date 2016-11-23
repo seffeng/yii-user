@@ -43,7 +43,6 @@ class UserInfo extends ActiveRecord {
         return [
             ['ui_name', 'required', 'message' => ConstService::ERROR_RULES_REQUIRE],
             [['ui_name', 'ui_email'], 'string', 'message' => ConstService::ERROR_RULES_FORMAT],
-            ['ui_phone', 'integer', 'message' => ConstService::ERROR_RULES_FORMAT],
             ['ui_phone', 'checkAttribute'],
             ['ui_email', 'email', 'message' => ConstService::ERROR_RULES_FORMAT],
         ];
@@ -56,7 +55,6 @@ class UserInfo extends ActiveRecord {
      */
     public function beforeSave($insert) {
         $this->ui_lasttime = THIS_TIME;
-        $this->ui_phone    = intval($this->ui_phone);
         return parent::beforeSave($insert);
     }
 
